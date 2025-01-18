@@ -1,21 +1,13 @@
 # zombierecovery
 
-Compiled from https://github.com/lightninglabs/chantools
+A repo describing steps to recover a zombie channel between lnd and cln nodes
 
-Commands used to build chantool binary from lightninglabs/chantools (branch zombierecovery-cln)
+See https://github.com/lightninglabs/chantools/pull/154
 
-```
-git pull https://github.com/lightninglabs/chantools.git
-cd chantools
-git checkout zombierecover-cln
-docker run -it --name go golang
-> exit   # exit from container
-docker start go   # start the stopped container
-docker cp . go:/go/chantools/  # copy the repo to the container
-docker exec -it go bash
-> cd chantools   # in the container
-> make install   # create the binary
-> exit           # exit the container
-docker cp go:/bin/chantools .   # copy the compiled binary out of the container
-```
+## Dependencies
 
+- Docker
+
+## Build
+
+	curl https://github.com/sudocarlos/zombierecovery/raw/refs/heads/main/build.sh | sh
