@@ -14,13 +14,13 @@ See https://github.com/lightninglabs/chantools/blob/master/doc/zombierecovery.md
 
 	curl https://raw.githubusercontent.com/sudocarlos/zombierecovery/refs/heads/main/build.sh | sh
 
-## Get xprv from Core Lightning node on Start9
+## Get hsm_secret hex from Core Lightning node on Start9
 
 - SSH to your Start9
 
 		ssh start9@192.168.0.123
 
-- Dump xprv and onchain descriptors from Core Lightning
+- Get hsm_secret hex from Core Lightning
 
 	⚠️ **This will expose the private key of your Core Lightning node. DO NOT SHARE** ⚠️
 
